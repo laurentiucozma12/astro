@@ -20,21 +20,25 @@ const userEmail = Astro.cookies.get("userEmail")
         <p class="uppercase text-3xl text-zinc-900">blog</p>
     </a>
 
-    {
-        userEmail?.value ? (
-            <a
-                href="/logout"
-                class="bg-teal-900 text-white py-3 px-6 rounded-xl text-xl"
+    <div class="flex">
+
+        <a
+            href="/home"
+            class="py-1 px-3 rounded-lg font-bold text-zinc-900 hover:bg-zinc-100"
             >
-                Logout
-            </a>
-        ) : (
-            <a
-                href="/login"
-                class="bg-teal-900 text-white py-3 px-6 rounded-xl text-xl"
-            >
-                Login
-            </a>
-        )
-    }
+            Home
+        </a>    
+        <a
+        href="/about"
+        class="py-1 px-3 rounded-lg font-bold text-zinc-900 hover:bg-zinc-100"
+        >
+        About
+        </a>    
+        <a
+            href="/blog"
+            class="py-1 px-3 rounded-lg font-bold text-zinc-900 hover:bg-zinc-100"
+        >
+            Blog
+        </a>    
+    </div>
 </header>
