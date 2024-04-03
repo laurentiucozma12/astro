@@ -15,10 +15,10 @@ interface Post {
 const posts: Post[] = await getCollection("posts");
 ---
 <Layout title="Blog | Rhythm Nation">
-	<Main>
-		<H1 text='Rhythm Nation Blog' />
+    <Main>
+        <H1 text='Rhythm Nation Blog' />
         {posts.map(post => (
-            <PostList posts={posts}/>
+            <PostList key={post.slug} post={post} />
         ))}
-	</Main>
+    </Main>
 </Layout>
